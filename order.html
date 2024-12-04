@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("orderpagebackgrround.avif");
+      color: #333;
+    }
+    .header {
+        background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav a.active {
+      border-bottom: 2px solid #FF5722;
+    }
+
+    .order-page {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .order-summary, .delivery-info {
+      flex: 1;
+      min-width: 300px;
+      background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-summary h2, .delivery-info h2 {
+      margin-bottom: 15px;
+      color:white;
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .summary-table th, .summary-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .summary-table th {
+      background-color: #f4f4f4;
+    }
+
+    .summary-table tfoot td {
+      font-weight: bold;
+      background-color: #f9f9f9;
+    }
+
+    .delivery-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .delivery-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .delivery-form input, .delivery-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .place-order-btn {
+      background-color: rgb(107, 107, 7);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .place-order-btn:hover {
+      background-color: #e64a19;
+    }
+
+    .footer {
+        background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+      cursor: pointer;
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Place Your Order</h1>
+    <nav class="nav">
+      <a href="s.html">Home</a>
+      <a href="s.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="order.html" class="active">Order</a>
+    </nav>
+  </header>
+
+  <main class="order-page">
+    <!-- Order Summary -->
+    <section class="order-summary">
+      <h2>Order Summary</h2>
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blue Denim Jeans</td>
+            <td>1</td>
+            <td>$49.99</td>
+          </tr>
+          <tr>
+            <td>Graphic T-shirt</td>
+            <td>2</td>
+            <td>$39.98</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total</td>
+            <td>$89.97</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Delivery Information Form -->
+    <section class="delivery-info">
+      <h2>Delivery Information</h2>
+      <form action="" method="POST" class="delivery-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <textarea id="address" name="address" rows="4" placeholder="Enter your delivery address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit" class="place-order-btn"><a href="payment.html">Place Order</a></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 E-Commerce Inc. | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

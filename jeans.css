@@ -1,0 +1,74 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .header {
+    background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .nav a {background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .section {background-image: url(jeansbackground.jpg);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .jeans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .jeans-item { background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+    border: 1px solid teal;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .jeans-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .jeans-item h3 {
+    margin: 10px 0;
+  }
+  
+  .jeans-item p {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(189, 187, 75);
+  }
+  
+  .footer {
+    background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+  

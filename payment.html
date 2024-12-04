@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+      color: #333;
+    }
+
+    .payment-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .payment-header h1 {
+      color: teal;
+    }
+
+    .payment-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .payment-option:hover, .payment-option.selected {
+      background-color: #f1f9ff;
+      border-color: #007BFF;
+    }
+
+    .payment-option input {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .payment-option input:checked {
+      background-color: #007BFF;
+      border-color: black;
+    }
+
+    .payment-details {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .payment-details.visible {
+      display: block;
+    }
+
+    .place-order-btn {
+      width: 100%;
+      background-color: rgb(168, 168, 26);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .place-order-btn:hover {
+      background-color: teal;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <div class="payment-header">
+      <h1>Select Payment Method</h1>
+      <p>Choose how you’d like to pay for your order</p>
+    </div>
+
+    <form action="successful.html" method="POST" id="payment-form">
+      <div class="payment-methods">
+        <!-- Online Payment Option -->
+        <div class="payment-option" data-method="online">
+          <input type="radio" name="payment" value="online" required>
+          <span>Online Payment (Credit/Debit Cards, UPI)</span>
+        </div>
+        <!-- Cash on Delivery Option -->
+        <div class="payment-option" data-method="cod">
+          <input type="radio" name="payment" value="cod" required>
+          <span>Cash on Delivery (COD)</span>
+        </div>
+        <!-- Wallet Payment Option -->
+        <div class="payment-option" data-method="wallet">
+          <input type="radio" name="payment" value="wallet" required>
+          <span>Pay using Wallet</span>
+        </div>
+      </div>
+
+      <!-- Payment Details Section -->
+      <div class="payment-details" id="payment-details">
+        <p>Please confirm your payment method before proceeding.</p>
+      </div>
+
+      <button type="submit" class="place-order-btn"><a href="successful.html">Place Order</a></button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript for handling dynamic selection
+    const paymentOptions = document.querySelectorAll('.payment-option');
+    const paymentDetails = document.getElementById('payment-details');
+
+    paymentOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        // Remove 'selected' class from all options
+        paymentOptions.forEach(opt => opt.classList.remove('selected'));
+        // Add 'selected' class to the clicked option
+        option.classList.add('selected');
+        // Display payment details dynamically
+        paymentDetails.classList.add('visible');
+        paymentDetails.innerHTML = `<p>You selected: <strong>${option.dataset.method}</strong></p>`;
+      });
+    });
+  </script>
+</body>
+</html>
+

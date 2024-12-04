@@ -1,0 +1,118 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+   background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+    color: #333;
+  }
+  
+  .header {
+    background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  .nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav a.active {
+    border-bottom: 2px solid #FF5722;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin: 10px 0;
+  }
+  
+  .social-links a {
+    margin-right: 10px;
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-form-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-form {background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    margin-bottom: 15px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {text-decoration: none;
+    background-color:teal;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .contact-form button:hover {text-decoration: none;
+    background-color: #e64a19;
+  }
+  
+  .map-section {background-image: url("map\ backgroud.jpg");
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer {
+    background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  

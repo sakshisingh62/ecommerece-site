@@ -1,0 +1,164 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header nav a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('kurti background.jpg') no-repeat center/cover;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Collection Section */
+.collection {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: linear-gradient(90deg, rgb(16, 26, 26), rgb(126, 125, 54));
+}
+
+.collection h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:white;
+    background: linear-gradient(90deg, rgb(16, 26, 26), rgb(126, 125, 54));
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery .item {
+    position: relative;
+    border: 2px solid teal;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery .item:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.gallery .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(16, 26, 26), rgb(126, 125, 54));
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery .item:hover .details {
+    opacity: 1; /* Show details on hover */
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+.details .price {
+    font-weight: bold;
+    color: rgb(75, 189, 189);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 30px 20px;
+    background-colo:whit;
+}
+
+.contact h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact p {
+    color: #555;
+    font-size: 16px;
+}
+
+.contact .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: rgb(12, 248, 248);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+} 
+
+.contact .btn:hover {
+    background-color: darkmagenta;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+    color: white;
+    padding: 15px;
+}
+
+.footer a {
+    color:white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    background-color: rgb(153, 103, 187);
+    
+}

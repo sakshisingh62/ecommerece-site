@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <title>Jewelry Collection</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(90deg, rgb(189, 187, 75), rgb(75, 189, 189));
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f0c040;
+        }
+
+        .hero {
+            background-image: url('jawbackground.jpg'); /* Replace with a real image URL */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .products {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: linear-gradient(90deg, rgb(75, 189, 189), rgb(189, 187, 75));
+            border: 1px solid teal;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+
+        .product h3 {
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+
+        .product p {
+            padding: 0 10px 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .product .price {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .product button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h1>Jewelry Collection</h1>
+        <nav>
+            <a href="s.html">Home</a>
+            
+            <a href="#Products">Products</a>
+            <a href="contacts.html">Contact</a>
+            <a href="order.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Elegant Jewelry for Every Occasion</h1>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Featured Collection</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="jaw1.jpeg" alt="Golden Necklace"> <!-- Replace with image URL -->
+                <h3>Golden Necklace</h3>
+                <p class="price">$299</p>
+                <p>Elegant design, perfect for weddings and parties.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="jwl2.jpeg" alt="Diamond Necklace"> <!-- Replace with image URL -->
+                <h3>Diamond Necklace</h3>
+                <p class="price">$499</p>
+                <p>Timeless beauty with exquisite craftsmanship.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="jwal3.jpeg" alt="Golden Necklace"> <!-- Replace with image URL -->
+                <h3>Golden Necklace</h3>
+                <p class="price">$199</p>
+                <p>A sleek and modern touch to your outfit.</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+ </body>
+</html>

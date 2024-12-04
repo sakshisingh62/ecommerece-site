@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Fashion Hub</title>
+    <link rel="stylesheet" href="e.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Elegant Fashion Hub</h1>
+            <div class="search-cart">
+                <input type="text" placeholder="Search for products..." id="searchBar">
+                <button class="search-btn">🔍</button>
+                <div class="cart">
+                    <a href="#">
+                        🛒 <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="product-card">
+            <img src="saree.jpeg" alt="Saree">
+            <div class="product-details">
+                <h3>Beautiful Saree</h3>
+                <p>Elegant and comfortable saree for special occasions.</p>
+                <div class="price">Under ₹899</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="kurtis.avif" alt="Kurti">
+            <div class="product-details">
+                <h3>Stylish Kurti</h3>
+                <p>Modern kurti with intricate embroidery details.</p>
+                <div class="price">Under ₹699</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="handbag.webp" alt="Handbag">
+        <div class="product-details">
+            <h3>Trendy Handbag</h3>
+            <p>Spacious and stylish handbag for everyday use.</p>
+            <div class="price">Under ₹1,299</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="jawellery.jpg" alt="Gold Earrings">
+        <div class="product-details">
+            <h3>Gold Earrings</h3>
+            <p>Elegant gold-plated earrings for any outfit.</p>
+            <div class="price">Under ₹2000</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="jeans.jpeg" alt="jeans&jeggins">
+        <div class="product-details">
+            <h3>Jeans & Jeggins</h3>
+            <p>Designer Modern Women Jeans & Jeggins for Womens.</p>
+            <div class="price">Under ₹999</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="tops.webp" alt="Tops & Tunics">
+        <div class="product-details">
+            <h3>Tops & Tunics</h3>
+            <p>Spacious and stylish handbag for everyday use.</p>
+            <div class="price">Under ₹499</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+        <!-- Add more product cards as needed -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elegant Fashion Hub. All rights reserved.</p>
+        <p>Follow us on <a href="https://www.instagram.com/?hl=en">Instagram</a> and <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F">Facebook</a>.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript for Cart Functionality
+        const cartCount = document.querySelector('.cart-count');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        let cartItems = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartItems++;
+                cartCount.textContent = cartItems;
+            });
+        });
+
+        // JavaScript for Search Functionality
+        const searchBar = document.getElementById('searchBar');
+        const products = document.querySelectorAll('.product-card');
+
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase();
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                product.style.display = productName.includes(query) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
